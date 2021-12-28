@@ -1,1 +1,1 @@
-# ml_devops_ch2
+# ML DevOps Course Module 1 - Chapter 2

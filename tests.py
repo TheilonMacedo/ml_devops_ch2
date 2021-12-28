@@ -1,1 +1,1 @@
-print("É isso aí")
+print("Initiating tests")
