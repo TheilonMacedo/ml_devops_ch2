@@ -1,25 +1,36 @@
+'''
+Exercises of logging, testing and debugging
+
+Author: Theilon Macêdo
+Date: 2021-12-27
+'''
+
+
 import logging
 
-logging.basicConfig(filename='results.log', level=logging.DEBUG)
+logging.basicConfig(
+    filename='logging_exercise.log',
+    level=logging.DEBUG,
+    format='%(asctime)s - %(levelname)s: %(message)s'
+)
 
 
 def sum_vals(first_num, second_num):
     '''
     Args:
-        first_num: (int or float)
-        second_num: (int or float)
+        first_num: (int)
+        second_num: (int)
     Return:
-        sum_result (float)
+        sum_result (int)
     '''
     try:
-        first_num = float(first_num)
-        second_num = float(second_num)
-        sum_result = first_num + second_num
+        logging.info(first_num, second_num)
+        assert isinstance(first_num, int)
+        assert isinstance(second_num, int)
         logging.info('SUCESS: Both args are numbers')
-        return sum_result
-    except ValueError:
+        return first_num + second_num
+    except AssertionError:
         logging.error('ERROR: At least one arg is not a number')
-        return None
 
 
 if __name__ == "__main__":
