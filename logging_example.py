@@ -31,5 +31,3 @@ def read_data(path):
         logging.error('ERROR: File not found :(')
 
 
-df = read_data('/mnt/c/Users/theil/Dropbox/desafio_suzano/vendas_preditas.csv')
-df
